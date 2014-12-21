@@ -47,11 +47,11 @@ angular.module('ngBoilerplate.account',['ui.router','ngResource'])
 .factory('sessionService',function($resource){
         var service = {
             register : function(account, success, failure){
-                var Account = $resource('/basic-web-app/rest/accounts');
+                var Account = $resource('/angular/rest/accounts');
                 Account.save({},account,success,failure);
              },
             userExist : function(account, success, failure){
-                var Account = $resource('/basic-web-app/rest/accounts');
+                var Account = $resource('/angular/rest/accounts');
                 var data = Account.get({name:account.name},
                     function () {
                         var accounts = data.accounts;

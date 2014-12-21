@@ -9,7 +9,7 @@ angular.module('ui.bootstrap.demo', ['ui.bootstrap'])
     $scope.bigCurrentPage = 1;
     $scope.nextelement = 0;
     
-    $http.get('/basic-web-app/app/largeLoad.json').
+    $http.get('/angular/app/largeLoad.json').
       success(function(data, status, headers, config) {
         $log.info(data);
         $scope.datanames=data;

@@ -16,7 +16,7 @@ angular.module('ngBoilerplate.client',['ui.router','ngResource'])
 .factory('clientService',function($resource){
         var service = {
             getClients : function(success, failure){
-                var Clients = $resource('/basic-web-app/rest/client');
+                var Clients = $resource('/angular/rest/client');
                 var data = Clients.get(
                     {},
                     function () {
